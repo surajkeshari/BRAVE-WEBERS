@@ -35,5 +35,5 @@ N/A<br>
 
                                                          Tech Stack:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-IN FRONTEND :- WE USE  1.HTML     2.CSS      3.JAVASCRIPT  4.BOOTSTRAP<br>
-IN BACKEND :-  WE USE  1.NODEJS   2.Mongodb  3.Express Js  4.JAVASCRIPT<br>
+IN FRONTEND :- WE USE  1.HTML       2.CSS        3.JAVASCRIPT    4.BOOTSTRAP<br>
+IN BACKEND :-  WE USE  1.NODEJS     2.Mongodb    3.Express Js    4.JAVASCRIPT<br>
