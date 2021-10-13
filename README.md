@@ -27,7 +27,7 @@ RESTAURANT SIDE FEATURE:-<br>
 2.SEND AN ALERT WHEN ORDER IS READY<br>
 3.REMOVE/ADD AN ITEM IN CATALOG ACCORDING TO RESTAURANT CHOICE<br>
 4.UPDATE THE PAYMENT STATUS<br>
-5.SUCCESFULL PAYMENT NOTIFICATION<br>
+5.SUCCESSFULL PAYMENT NOTIFICATION<br>
 
                                                         INNOVATION FEATURE:-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
