@@ -31,45 +31,43 @@
         .welcome{
             margin: 1px 2px 63px 4px;
         }
-        .modal-footer>:not(:last-child) {
-    margin-right: 9.25rem;
-}
     </style>
   </head>
   <body>
    
-    <form class="form">
+    <form class="form" method="post" action="/restLogin">
         <div class="welcome">
             <h1 class="h1">WELCOME IN SMART RESTAURANT</h1>
+            <h1 class="h1">RESTAURANT LOGIN</h1>
 
         </div>
-        <div class="form-group row">
+        <!-- <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" id="inputEmail3" placeholder="Write Your Name">
           </div>
-        </div>
+        </div> -->
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="example@gmail.com">
+            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="example@gmail.com">
           </div>
         </div>
-        <div class="form-group row">
+        <!-- <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Contact Number</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" id="inputEmail3" placeholder="9517442123">
+            <input type="number" class="form-control" id="inputEmail3" placeholder="9999999999">
           </div>
-        </div>
+        </div> -->
         <div class="form-group row">
           <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
           <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
           </div>
         </div>
         <fieldset class="form-group">
           <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Are you visiting first time this website</legend>
+            <!-- <legend class="col-form-label col-sm-2 pt-0">Are you visiting first time this website</legend>
             <div class="col-sm-10">
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
@@ -82,7 +80,7 @@
                 <label class="form-check-label" for="gridRadios2">
                   No
                 </label>
-              </div>
+              </div> -->
               <!-- <div class="form-check disabled">
                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
                 <label class="form-check-label" for="gridRadios3">
@@ -91,7 +89,7 @@
               </div> -->
             </div>
           </div>
-        </fieldset>
+        </fieldset> 
         <!-- <div class="form-group row">
           <div class="col-sm-2">checkbox</div>
           <div class="col-sm-10">
@@ -102,47 +100,13 @@
               </label>
             </div>
           </div>
-        </div>  -->
-
-         <div class="form-group row">
+        </div> -->
+        <div class="form-group row">
           <div class="col-sm-10">
-            <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              Signup
-            </button>
+            <button type="submit" class="btn btn-primary">Log in</button>
           </div>
         </div>
-
       </form>
-        
- <!-- Modal -->
- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">You Now Become A member Of Smart-Restaurant</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-        Your registraion become success full
-      <br>
-       
-        
-      <div class="modal-footer">
-        <div>
-          Remember your password : <input type="checkbox" name="passwrd">
-        </div>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
