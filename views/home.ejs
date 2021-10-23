@@ -12,6 +12,12 @@
 
   <title>Hello, world!</title>
   <style>
+    /* .navbar{
+    padding-top: 2px;
+    } */
+    /* .form-inline {
+    height: 38px;
+} */
     .carousel {
       /* position: relative; */
       /* border: 10px solid red; */
@@ -52,13 +58,30 @@
       text-decoration: none;
       color: lightgreen;
     }
-    .btn{
+
+    .btn {
       border: 0.5px solid red;
     }
-    .srch{
+
+    .srch {
       border: 0.5px solid green;
-      height: 20px;
+
     }
+
+    /* .fixed-top {
+      height: 45px;
+    } */
+  
+/* .card-title { */
+    /* margin-bottom: 0.75rem;
+    margin-top: 20px; */
+    /* margin-top: revert; */
+/* } */
+/* .card{
+  margin-top: 30px ;
+} */
+
+  
   </style>
 </head>
 
@@ -70,13 +93,15 @@
       <div class="bg-dark p-4">
         <h2 class="text-white h4"> <a class="nav" href="/">Home</a></h2>
         <h2 class="text-white h4"> <a class="nav" href="./about.html">about Us</a></h2>
-        <h2 class="text-white h4"> <a class="nav" href="./contact.html">Contact Us</a></h2>
+        <h2 class="text-white h4"> <a class="nav" href="./contact.html">Contact Us</a></2h2>
         <h2 class="text-white h4"> <a class="nav" href="">Catalog</a></h2>
         <!-- <span class="text-muted">Toggleable via the navbar brand.</span> -->
       </div>
     </div>
-<!-- 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    
+    
+    
+    <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">Fixed navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -111,17 +136,23 @@
       </div>
     </nav> -->
 
-    <nav class="navbar navbar-dark fixed-top bg-dark">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-        <button class="btn srch btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
+    
+    <nav class="navbar navbar-dark fixed-top bg-dark">
+    
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search">
+          <button class="btn  btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <!-- <button class="btn srch btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+        </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      
     </nav>
+
 
 
 
@@ -136,11 +167,11 @@
       <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis error nobis doloremque
         laborum accusamus illo ab officiis assumenda, odio nemo tempore, eligendi praesentium aliquid, dolore dolorum
         harum unde fuga commodi.</p>
-       <a href="/userLogin"><button type="button"  class="btn btn-dark">Login(user)</button></a>
-  <a href="/userSignup">     <button type="button" class="btn btn-dark">Signup(user)</button></a>
+      <a href="/userLogin"><button type="button" class="btn btn-dark">Login(user)</button></a>
+      <a href="/userSignup"> <button type="button" class="btn btn-dark">Signup(user)</button></a>
       <p class="card-text">For restaurants</p>
-       <a href="/restLogin"><button type="button" class="btn btn-dark">Login(restaurant)</button></a>
-       <a href="/restSignup"><button type="button" class="btn btn-dark">Signup(restaurant)</button></a>
+      <a href="/restLogin"><button type="button" class="btn btn-dark">Login(restaurant)</button></a>
+      <a href="/restSignup"><button type="button" class="btn btn-dark">Signup(restaurant)</button></a>
     </div>
   </div>
 
