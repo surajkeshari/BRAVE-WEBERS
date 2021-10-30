@@ -59,31 +59,33 @@
       color: lightgreen;
     }
 
-    h2
-      {
-        text-align: center;
-        color: lightcyan;
-        font-family: 'Times New Roman', Times, serif;
-      
+    h2 {
+      text-align: center;
+      color: lightcyan;
+      font-family: 'Times New Roman', Times, serif;
 
-      }
-      h3{
-        text-align: center;
-        background-color: aliceblue;
-        color: black;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        display: block;
-        
-        }
-      #bar
-      {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      }
-      .h4, h4 {
-    font-size: 1.5rem;
-}
 
-    .btn{
+    }
+
+    h3 {
+      text-align: center;
+      background-color: aliceblue;
+      color: black;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      display: block;
+
+    }
+
+    #bar {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .h4,
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    .btn {
       border: 0.5px solid red;
     }
 
@@ -95,17 +97,107 @@
     /* .fixed-top {
       height: 45px;
     } */
-  
-/* .card-title { */
+
+    /* .card-title { */
     /* margin-bottom: 0.75rem;
     margin-top: 20px; */
     /* margin-top: revert; */
-/* } */
-/* .card{
+    /* } */
+    /* .card{
   margin-top: 30px ;
 } */
 
-  
+
+    /* .developers{
+   /* background-color: white; */
+    /* color: white; */
+    /* opacity: -100; */
+    /* background-image: https://www.freepik.com/free-vector/realistic-luxury-background-with-golden-lines_14669589.htm#page=1&position=24&from_view=detail#&position=24&from_view=detail; */
+    /* background-image: https://tse3.mm.bing.net/th?id=OIP.wDO0EKO7OwMgHo-6xJvBvAHaEK&pid=Api&P=0&w=299&h=169; */
+    /* } */
+
+    /* .d-block{
+   opacity: 10;
+ } */
+
+    .carousel-item {
+      /* background-color: wheat; */
+      height: 60vh;
+      width: 100vw;
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Do not repeat the image */
+      background-size: cover;
+      /* Resize the background image to cover the entire container */
+      /* padding: 0px 40%; */
+    
+    }
+
+    .top {
+      background-image: url(/img/carousel1.jfif);
+      /* background-color: black; */
+    }
+
+    .mid {
+      background-image: url(/img/carousel2.jpg);
+      /* background-color: black; */
+      flex-direction: row;
+    }
+
+    .bottom {
+      background-image: url(/img/carousel3.jpg);
+      /* background-color: black; */
+    }
+
+    .developers {
+
+      display: flex;
+      flex-direction: row;
+      padding: 0px 35px;
+      margin: 0px 30px;
+      text-decoration: overline;
+      color: rgb(200, 0, 0);
+      text-shadow: 2px 2px 5px greenyellow;
+
+    }
+
+    .dev-reg {
+
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      padding: 0px 90px;
+      margin: 3px 30px 0px 30px;
+      text-shadow: 2px 2px 5px greenyellow;
+      color: rgb(200, 0, 0);
+    }
+
+    .nm {
+      padding: 2px 39px;
+      font-style: oblique;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .reg {
+      padding: 30px 47px 2px 47px;
+      font-style: oblique;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .Sur {
+      padding: 40px 47px 2px 0px;
+    }
+
+    .Ash {
+      padding: 40px 37px 2px 77px;
+    }
+
+    .Kau {
+      padding: 40px 47px 2px 100px;
+    }
   </style>
 </head>
 
@@ -122,9 +214,9 @@
         <!-- <span class="text-muted">Toggleable via the navbar brand.</span> -->
       </div>
     </div>
-    
-    
-    
+
+
+
     <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">Fixed navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -161,21 +253,21 @@
     </nav> -->
 
 
-    
-    <nav class="navbar navbar-dark fixed-top bg-dark">
-    
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search">
-          
-          <button class="btn srch btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-          aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-      </nav>
-      
+    <nav class="navbar navbar-dark fixed-top bg-dark">
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+
+        <button class="btn srch btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </nav>
+
 
   </div>
 
@@ -183,17 +275,18 @@
 
 
   <div class="card bg-dark text-white siz">
-    <img class="card-img" src="https://th.bing.com/th/id/R.896f746826297c60f36ce5d4e7e2f320?rik=xrX6uewa%2fBqE1w&riu=http%3a%2f%2fwww.wallpapersin4k.org%2fwp-content%2fuploads%2f2017%2f04%2fRestaurant-Wallpaper-HD-23.jpg&ehk=mhwd2tv%2fcWdRKTAQTnMqQwQKy817axW7QDX9yUvHTXI%3d&risl=&pid=ImgRaw&r=0"
+    <img class="card-img"
+      src="https://th.bing.com/th/id/R.896f746826297c60f36ce5d4e7e2f320?rik=xrX6uewa%2fBqE1w&riu=http%3a%2f%2fwww.wallpapersin4k.org%2fwp-content%2fuploads%2f2017%2f04%2fRestaurant-Wallpaper-HD-23.jpg&ehk=mhwd2tv%2fcWdRKTAQTnMqQwQKy817axW7QDX9yUvHTXI%3d&risl=&pid=ImgRaw&r=0"
       alt="Card image">
     <div class="card-img-overlay">
 
       <!-- <h5 class="card-title">WELCOME IN SMART RESTAURANT</h5> -->
       <br><br>
-      <h2>Welcome in Smart restaurant </h2>
+      <h2>Welcome in Smart Restaurant </h2>
       <h3 class="card-text">Food is the ingredient that binds us "TOGETHER"</h3>
       <br>
-       <a href="/userLogin"><button type="button"  class="btn btn-dark">Login(user)</button></a>
-  <a href="/userSignup">  <button type="button" class="btn btn-dark">Signup(user)</button></a>
+      <a href="/userLogin"><button type="button" class="btn btn-dark">Login(user)</button></a>
+      <a href="/userSignup"> <button type="button" class="btn btn-dark">Signup(user)</button></a>
       <p class="card-text">For Restaurants</p>
 
       <!-- <h5 class="card-title">WELCOME IN SMART RESTAURANT</h5>
@@ -205,8 +298,8 @@
   <a href="/userSignup">     <button type="button" class="btn btn-dark">Signup(user)</button></a>
       <p class="card-text">For restaurants</p> -->
 
-       <a href="/restLogin"><button type="button" class="btn btn-dark">Login(restaurant)</button></a>
-       <a href="/restSignup"><button type="button" class="btn btn-dark">Signup(restaurant)</button></a>
+      <a href="/restLogin"><button type="button" class="btn btn-dark">Login(restaurant)</button></a>
+      <a href="/restSignup"><button type="button" class="btn btn-dark">Signup(restaurant)</button></a>
     </div>
   </div>
 
@@ -251,23 +344,38 @@
     </div>
   </div>
 
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <!-- carousel-fade -->
+  <div id="carouselExampleFade" class="carousel slide " data-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100"
+      <!-- <div class="carousel-item  top active">
+        <h3>Contact Us</h3> -->
+        <!-- <img class="d-block w-100"
           src="https://www.freepik.com/free-vector/realistic-luxury-background-with-golden-lines_14669589.htm#page=1&position=24&from_view=detail#&position=24&from_view=detail"
           alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100"
+      </div> -->
+        <div class="carousel-item mid active ">
+          <h3>Developers</h3>
+          <div class="dev-reg">
+            <h5 class="reg Sur">20205170</h5>
+            <h5 class="reg Ash">20205170</h5>
+            <h5 class="reg Kau">20205170</h5>
+          </div>
+
+          <div class="developers">
+            <h5 class="nm">suraj keshari</h5>
+            <h5 class="nm">ashwani pandey</h5>
+            <h5 class="nm">kaushtubh shah</h5>
+          </div>
+          <!-- <img class="d-block w-100"
           src="https://image.freepik.com/free-vector/gradient-golden-luxury-style-background_52683-69596.jpg"
-          alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100"
+          alt="Second slide"> -->
+        </div>
+        <!-- <div class="carousel-item bottom ">
+        <h3>About Us</h3> -->
+        <!-- <img class="d-block w-100"
           src="https://image.freepik.com/free-vector/luxurious-background-with-golden-details_52683-71736.jpg"
           alt="Third slide">
-      </div>
+      </div> -->
     </div>
     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
