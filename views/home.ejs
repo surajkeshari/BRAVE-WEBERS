@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+  <title>Smart-Restaurant</title>
   <style>
     /* .navbar{
     padding-top: 2px;
@@ -40,7 +40,7 @@
 
     .card-img {
       width: 100%;
-      height: 85vh;
+      height: 95vh;
       border-radius: calc(.25rem - 1px);
     }
 
@@ -94,6 +94,12 @@
 
     }
 
+    .btn-footer {
+      border: 0.8px solid white;
+      border-radius: 5px;
+      padding: 0px 4px 2px 4px;
+    }
+
     /* .fixed-top {
       height: 45px;
     } */
@@ -128,10 +134,12 @@
       /* Center the image */
       background-repeat: no-repeat;
       /* Do not repeat the image */
-      background-size: cover;
+      /* background-size: cover; */
+      background-size: 100% auto;
+
       /* Resize the background image to cover the entire container */
       /* padding: 0px 40%; */
-    
+
     }
 
     .top {
@@ -285,9 +293,9 @@
       <h2>Welcome in Smart Restaurant </h2>
       <h3 class="card-text">Food is the ingredient that binds us "TOGETHER"</h3>
       <br>
-      <a href="/userLogin"><button type="button" class="btn btn-dark">Login(user)</button></a>
-      <a href="/userSignup"> <button type="button" class="btn btn-dark">Signup(user)</button></a>
-      <p class="card-text">For Restaurants</p>
+      <a href="/userLogin"><button type="button" class="btn btn-sm btn-dark">Login(user)</button></a>
+      <!-- <a href="/userSignup"> <button type="button" class="btn btn-dark">Signup(user)</button></a> -->
+      <!-- <p class="card-text">For Restaurants</p> -->
 
       <!-- <h5 class="card-title">WELCOME IN SMART RESTAURANT</h5>
       <p class="card-text">Welcome in smart restaurant to my guest </p>
@@ -298,8 +306,8 @@
   <a href="/userSignup">     <button type="button" class="btn btn-dark">Signup(user)</button></a>
       <p class="card-text">For restaurants</p> -->
 
-      <a href="/restLogin"><button type="button" class="btn btn-dark">Login(restaurant)</button></a>
-      <a href="/restSignup"><button type="button" class="btn btn-dark">Signup(restaurant)</button></a>
+      <a href="/restLogin"><button type="button" class="btn btn-sm btn-dark">Login(restaurant)</button></a>
+      <!-- <a href="/restSignup"><button type="button" class="btn btn-dark">Signup(restaurant)</button></a> -->
     </div>
   </div>
 
@@ -349,30 +357,30 @@
     <div class="carousel-inner">
       <!-- <div class="carousel-item  top active">
         <h3>Contact Us</h3> -->
-        <!-- <img class="d-block w-100"
+      <!-- <img class="d-block w-100"
           src="https://www.freepik.com/free-vector/realistic-luxury-background-with-golden-lines_14669589.htm#page=1&position=24&from_view=detail#&position=24&from_view=detail"
           alt="First slide">
       </div> -->
-        <div class="carousel-item mid active ">
-          <h3>Developers</h3>
-          <div class="dev-reg">
-            <h5 class="reg Sur">20205170</h5>
-            <h5 class="reg Ash">20205170</h5>
-            <h5 class="reg Kau">20205170</h5>
-          </div>
+      <div class="carousel-item mid active ">
+        <h3>Developers</h3>
+        <div class="dev-reg">
+          <h5 class="reg Sur">20205170</h5>
+          <h5 class="reg Ash">20205170</h5>
+          <h5 class="reg Kau">20205170</h5>
+        </div>
 
-          <div class="developers">
-            <h5 class="nm">suraj keshari</h5>
-            <h5 class="nm">ashwani pandey</h5>
-            <h5 class="nm">kaushtubh shah</h5>
-          </div>
-          <!-- <img class="d-block w-100"
+        <div class="developers">
+          <h5 class="nm">suraj keshari</h5>
+          <h5 class="nm">ashwani pandey</h5>
+          <h5 class="nm">kaushtubh shah</h5>
+        </div>
+        <!-- <img class="d-block w-100"
           src="https://image.freepik.com/free-vector/gradient-golden-luxury-style-background_52683-69596.jpg"
           alt="Second slide"> -->
-        </div>
-        <!-- <div class="carousel-item bottom ">
+      </div>
+      <!-- <div class="carousel-item bottom ">
         <h3>About Us</h3> -->
-        <!-- <img class="d-block w-100"
+      <!-- <img class="d-block w-100"
           src="https://image.freepik.com/free-vector/luxurious-background-with-golden-details_52683-71736.jpg"
           alt="Third slide">
       </div> -->
@@ -386,6 +394,51 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+
+
+
+  <section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: rgb(2, 115, 150);">
+      <!-- Grid container -->
+      <div class="container p-0.9 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex   justify-content-center align-items-center">
+            <span class="me-1.4">Register for free</span>
+            <!-- <button type="button" class="btn btn-outline-light btn-rounded">
+              Sign up!
+            </button> -->
+            <a href="/userSignup"> <button type="button"
+                class="btn btn-sm btn-footer btn-dark">Signup(user)</button></a>
+            <span style="color:rgb(2, 115, 150);">----------------------------------</span>
+            <span class="me-1.4">Register for free</span>
+            <!-- <button type="button" class="btn btn-outline-light btn-rounded">
+              Sign up!
+            </button> -->
+            <!-- <a href="/userSignup"> <button type="button" class="btn btn-sm btn-dark">Signup(user)</button></a> -->
+            <a href="/restSignup"><button type="button"
+                class="btn btn-sm btn-footer btn-dark">Signup(restaurant)</button></a>
+          </p>
+
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-0.8" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-white" style="text-decoration: none;" href="http://localhost:3000/">SmartRestaurant.com</a>
+        <!-- <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+
+
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
