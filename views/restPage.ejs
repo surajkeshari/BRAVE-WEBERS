@@ -10,14 +10,23 @@
 <body>
     <h1><%= restUser.name %> 's Homepage</h1>
    <!-- <h1>Restraunt Page</h1> -->
-   <a href="/restUser/<%= restUser._id %>/<%= restUser.name%>/add"><button>Add Items</button></a> 
+   <a href="/restUser/<%= restUser._id %>/add"><button>Add Items</button></a> 
    <h1>Menu Items</h1>
-   <% restUser.items.forEach(function(item){ %>
+   <% items.forEach(function(item){ %>
     <div class="card">
      <ul>
          <li><%= item.name %></li>
          <li><%= item.price %></li>
          <li><%= item.prepTime %></li>
+         <form action="/restUser/<%= restUser.id %>/<%= item.id %>/delete" method="post">
+            <button type="submit">Delete</button>
+        </form>
+    
+         <form action="/restUser/<%= restUser.id %>/<%= item.id %>/edit" method="get">
+            <button type="submit">Edit</button>
+        </form>
+    
+         
      </ul>
     </div>
   <% }) %>
