@@ -39,6 +39,7 @@ db.on('error', () => {
     console.log("Error in connection to Mongo");
 })
 const Users = require(`./models/user`);
+const Items= require(`./models/catalogItems`);
 const restUsers = require(`./models/restaurant`);
 passport.use('userLocal', Users.createStrategy());
 passport.use('restLocal', restUsers.createStrategy());
@@ -84,6 +85,32 @@ app.get(`/about`, (req, res) => {
     }
 })
 
+// Get page of restaurant
+app.get(`/restUser/:id/:name`,(req,res)=>{
+    // restUsers.findById(req.params.id,(err,user)=>{
+    //     if(err){
+    //         console.log(err);
+    //     }else{
+    //         res.render('restPage',{restUser:user});
+           
+    //     }
+    //  })
+
+    restUsers.findOne({_id:req.params.id}).populate('items').
+    exec((err,user)=>{
+       if(err){console.log(err)
+    }
+       else{
+         res.render('restPage',{restUser:user})
+       }
+    })
+})
+
+//Get page to add items
+app.get(`/restUser/:id/:name/add`,(req,res)=>{
+
+    res.render(`add`,{id:req.params.id});
+})
 
 
 // Registering
@@ -155,11 +182,45 @@ app.post('/restLogin', (req, res) => {
             console.log(err);
         }
         passport.authenticate('restLocal')(req, res, () => {
-            res.redirect(`/about`);
+            restUsers.findOne({email:user.email},(err,restUser)=>{
+                res.redirect(`/restUser/${restUser.id}/${restUser.name}`)
+            })
+            
         })
     })
 })
 
+
+
+// Adding Items
+app.post('/:id/addItem',(req,res)=>{
+ let newitem = new Items({
+     name:req.body.name,
+     price:req.body.price,
+     prepTime: req.body.prepTime
+ })
+
+ newitem.save((err)=>{
+    if(err){
+    console.log(err);
+    }else{
+        // res.redirect(`/demo`);
+        console.log("Done");
+        
+        
+        restUsers.findById(req.params.id,(err,user)=>{
+            if(err){ console.log(err)};
+            user.items.push(newitem);
+            user.save();
+            console.log("Saved");
+            res.redirect(`/restUser/${user._id}/${user.name}`)
+      })
+    }
+})
+
+
+
+})
 
 
 
