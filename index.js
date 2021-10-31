@@ -77,6 +77,17 @@ app.get(`/restLogin`, (req, res) => {
 })
 
 
+////////////////////////////////////
+
+
+app.get(`/about`, (req, res) => {
+    res.render(`about`);
+})
+app.get(`/contact`, (req, res) => {
+    res.render(`contact`);
+})
+
+////////////////////////////////////////
 app.get(`/about`, (req, res) => {
     if (req.isAuthenticated()) {
         res.render(`about`);
