@@ -35,7 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 // before connection to database////////
 
-mongoose.connect('mongodb://localhost:27017/SmartRestraunt', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/SmartRestaurant', { useNewUrlParser: true });
 db = mongoose.connection;
 db.once('open', () => {
     console.log("Connected to Mongo");
@@ -102,32 +102,37 @@ app.get(`/about`, (req, res) => {
 })
 
 // Get page of restaurant
-app.get(`/restUser/:id/:name`, (req, res) => {
-    // restUsers.findById(req.params.id,(err,user)=>{
-    //     if(err){
-    //         console.log(err);
-    //     }else{
-    //         res.render('restPage',{restUser:user});
+app.get(`/restUser/:id`,(req,res)=>{
+    restUsers.findById(req.params.id,(err,user)=>{
+        if(err){
+            console.log(err);
+        }else{
+            Items.find({rest_id:user._id},(err,items)=>{
 
-    //     }
-    //  })
+                res.render('restPage',{restUser:user, items:items});
+            })
+           
+        }
+     })
 
-    restUsers.findOne({ _id: req.params.id }).populate('items').
-        exec((err, user) => {
-            if (err) {
-                console.log(err)
-            }
-            else {
-                res.render('restPage', { restUser: user })
-            }
-        })
+    // restUsers.findOne({_id:req.params.id}).populate('items').
+    // exec((err,user)=>{
+    //    if(err){console.log(err)
+    // }
+    //    else{
+    //      res.render('restPage',{restUser:user})
+    //    }
+    // })
 })
 
 //Get page to add items
-app.get(`/restUser/:id/:name/add`, (req, res) => {
+app.get(`/restUser/:id/add`,(req,res)=>{
 
-    res.render(`add`, { id: req.params.id });
+    res.render(`add`,{id:req.params.id,Head:"Add Item", purpose:'addItem'});
 })
+
+
+
 
 
 // Registering
@@ -255,8 +260,8 @@ app.post('/restLogin', (req, res) => {
             console.log(err);
         }
         passport.authenticate('restLocal')(req, res, () => {
-            restUsers.findOne({ email: user.email }, (err, restUser) => {
-                res.redirect(`/restUser/${restUser.id}/${restUser.name}`)
+            restUsers.findOne({email:user.email},(err,restUser)=>{
+                res.redirect(`/restUser/${restUser.id}`)
             })
 
         })
@@ -266,37 +271,80 @@ app.post('/restLogin', (req, res) => {
 
 
 // Adding Items
-app.post('/:id/addItem', (req, res) => {
-    let newitem = new Items({
-        name: req.body.name,
-        price: req.body.price,
-        prepTime: req.body.prepTime
+app.post('/restUser/:id/addItem',(req,res)=>{
+ let newitem = new Items({
+     name:req.body.name,
+     price:req.body.price,
+     prepTime: req.body.prepTime,
+     rest_id: req.params.id
+ })
+
+ newitem.save((err)=>{
+    if(err){
+    console.log(err);
+    }else{
+        // res.redirect(`/demo`);
+        console.log("Done");
+        
+        
+    //     restUsers.findById(req.params.id,(err,user)=>{
+    //         if(err){ console.log(err)};
+    //         user.items.push(newitem);
+    //         user.save();
+    //         console.log("Saved");
+    //         res.redirect(`/restUser/${user._id}/${user.name}`)
+    //   })
+    restUsers.findById(req.params.id,(err,user)=>{
+        res.redirect(`/restUser/${user._id}`)
     })
-
-    newitem.save((err) => {
-        if (err) {
-            console.log(err);
-        } else {
-            // res.redirect(`/demo`);
-            console.log("Done");
-
-
-            restUsers.findById(req.params.id, (err, user) => {
-                if (err) { console.log(err) };
-                user.items.push(newitem);
-                user.save();
-                console.log("Saved");
-                res.redirect(`/restUser/${user._id}/${user.name}`)
-            })
-        }
-    })
+    }
+})
 
 
 
 })
 
 
+// deleting Items
+app.post('/restUser/:id/:itemId/delete',(req,res)=>{
+    Items.deleteOne({_id:req.params.itemId}).then(()=>{
+        console.log("Data Deleted");
+        res.redirect(`/restUser/${req.params.id}`)
+    }).catch((err)=>{
+        console.log(err);
+        
+    })
+})
 
+// Editing Items
+app.get(`/restUser/:id/:itemId/edit`,(req,res)=>{
+    restUsers.findById(req.params.id,(err,user)=>{
+        if(err){
+            console.log(err);
+        }
+        Items.findById(req.params.itemId,(err,item)=>{
+            if(err){
+                console.log(err);
+            }
+            res.render(`edit`,{restUser:user,item : item});
+        })
+    })
+})
+
+app.post(`/restUser/:id/:itemId/edit`,(req,res)=>{
+    let item={
+        name:req.body.name,
+        price:req.body.price,
+        prepTime:req.body.prepTime
+    }
+    Items.updateOne({_id:req.params.itemId},item,(err)=>{
+     if(err){
+         console.log(err);
+     }else{
+         res.redirect(`/restUser/${req.params.id}`)
+     }
+    })
+})
 
 
 

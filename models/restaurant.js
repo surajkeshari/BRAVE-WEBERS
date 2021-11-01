@@ -1,6 +1,6 @@
 const mongoose= require(`mongoose`);
 const passportLocalMongoose = require(`passport-local-mongoose`);
-const Items= require(`./catalogItems`)
+// const Items= require(`./catalogItems`)
 let restSchema = new mongoose.Schema(
     { 
         name:String,
@@ -8,7 +8,7 @@ let restSchema = new mongoose.Schema(
         contact_no: Number,
         password:String,
         address:String,
-        items:[{type: mongoose.Schema.Types.ObjectId, ref: 'Items'}]
+        // items:[{type: mongoose.Schema.Types.ObjectId, ref: 'Items'}]
 
     }
 );
