@@ -200,7 +200,7 @@ app.post('/userSignup', (req, res) => {
                 // res.sendFile(__dirname + "/failure.html")
             } else {
                 //   console.log(responce.statusCode);  
-                if (response.status === 200) {
+                if (Response.status === 200) {
                     res.send("Succesfully SigningUp!");
                 }else{
                     res.send("there was an error with signing up,please try again");
