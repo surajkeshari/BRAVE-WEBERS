@@ -129,6 +129,19 @@ app.get(`/restUser/:id/add`,(req,res)=>{
     res.render(`add`,{id:req.params.id,Head:"Add Item", purpose:'addItem'});
 })
 
+//Get homepage of user
+app.get(`/userpage/:id`,(req,res)=>{
+   restUsers.find({}).then((restUsers)=>{
+       Users.findById(req.params.id,(err,user)=>{
+           if(err){
+               console.log(err);
+           }
+           res.render(`userPage`,{restUsers:restUsers,user:user});
+       })
+   })
+})
+
+
 
 
 
@@ -241,7 +254,10 @@ app.post('/userLogin', (req, res) => {
             console.log(err);
         }
         passport.authenticate('userLocal')(req, res, () => {
-            res.redirect(`/about`);
+            Users.findOne({email:user.email},(err,user)=>{
+                
+                res.redirect(`/userpage/${user._id}`);
+            })
         })
     })
 })
