@@ -5,14 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Item</title>
+    <style>
+        body{
+            background-color: burlywood;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            border: 15px;
+            border-width: 50px;
+            background-image: url(../static/img/add_page.jfif);
+        }
+        input{
+            text-align: left;
+            padding-bottom: 3px;
+        }
+        h1{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: lightcoral;
+        }
+        .add{
+            display: block;
+            padding: 5px;
+
+        }
+    
+        
+    </style>
 </head>
 <body>
     <h1>Add Item</h1>
-    <form action="/restUser/<%= id %>/addItem" method="post">
-       Item Name <input type="text" name="name">
-       Price(Rupees) <input type="text" name="price">
-       Preparation Time <input type="" name="prepTime">
+    <!-- <img src="../static/img/add_page.jfif" alt="image"> -->
+    <form action="/restUser/<%= id %>/addItem" method="post" class="add">
+      <div class="add">
+        Item Name 
+        <input type="text" name="name">
+      </div>
+      <div class="add">
+        Price(Rupees) 
+        <input type="text" name="price">
+      </div>
+      
+      <div class="add">
+       Preparation Time (in min)
+       <input type="" name="prepTime">
+      </div>
        <input type="submit" value="Add Item">
     </form>
+
 </body>
 </html>
