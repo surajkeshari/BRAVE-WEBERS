@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+   padding: 0px;
+}
+.headings ul{
+    display: flex;
+}
+.headings ul li{
+   list-style: none;
+   font-size: large;
+   margin: 16px;
+}
+.row ul{
+    display: flex;
+}
+.row ul li{
+    list-style: none;
+    margin: 0px 38px;
+    text-align: center;
+}
+.quantity{
+    border: 2px solid black;
+    height: 3vh;
+    width: 5vw;
+    margin:0px 20px;
+    
+}
+.total{
+    display:flex;
+    margin: 20px;
+}
+
+#payment {
+display: block;
+text-align: center;
+}
+.card ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card ul li{
+list-style: none;
+}

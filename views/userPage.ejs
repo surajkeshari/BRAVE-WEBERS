@@ -11,15 +11,16 @@
     Enjoy something delicious today
 </h1> 
 <h2>Choose from below restaurants</h2>
-<% restUsers.forEach(function(restUser){ %>
+<% restUsers.forEach((restUser)=>{ %>
     <div class="card">
      <ul>
          <li><%= restUser.name %></li>
          <li><%= restUser.address %></li>
-         
-        
-    </ul>
+         <li><form action="/user/<%= user.id %>/<%= restUser.id %>/<%= restUser.name %>/menu" method="get">
+             <button type="submit">Select</button>
+         </form></li>
+        </ul>
 </div>
-<% }) %>
+<% });%>
 </body>
 </html>
