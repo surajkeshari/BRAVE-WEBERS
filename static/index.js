@@ -52,7 +52,9 @@ function updateTotal(){
        
        console.log(price,quantity);
     }
+   
     document.getElementById(`amount`).innerText="$"+total.toString();
+    // state(total);
 }
 
 function AddToCart(button){
@@ -80,4 +82,21 @@ document.getElementsByClassName(`container`)[0].innerHTML+=newrow;
 updateTotal();
 addListeners();
 }
+// function state(total){
+//     console.log(total);
+//     const tot=document.getElementById(`total`);
+//     if(tot==null){
+//         const form= document.getElementById(`payment`);
+//         const input= document.createElement("input");
+//        input.setAttribute("type", "hidden");
+//        input.setAttribute("id", "total");
+//        input.setAttribute("name", "total");
+//        input.setAttribute("value", total);
+//        form.appendChild(input);
+//     }else{
+//         tot.setAttribute("value", total);  
+//     }
+    
+ 
+// }
 

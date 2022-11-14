@@ -14,6 +14,7 @@ const passportLocalMongoose = require(`passport-local-mongoose`);
 const restRoutes=require(`./routes/restRoutes`);
 const userRoutes= require(`./routes/userRoutes`);
 const authRoutes= require(`./routes/authentication`);
+const payRoutes= require(`./routes/payment`);
 const app = express();
 
 
@@ -82,6 +83,9 @@ app.use(userRoutes);
 
 //Authentication routes
 app.use(authRoutes);
+
+//Payment Route
+// app.use(payRoutes);
 
 app.listen(5000, () => {
     console.log("Server running on 5000");

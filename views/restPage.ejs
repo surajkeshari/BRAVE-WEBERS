@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= restUser.name %> 's Homepage</title>
     <link rel="stylesheet" href="/index.css">
@@ -20,6 +21,8 @@
        
     </style>
     <script src="/index.js"></script>
+    <script src="/total.js"></script>
+    <script type="application/javascript" src="https://securegw-stage.paytm.in/merchantpgpui/checkoutjs/merchants/KZvMya74333219442185.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1><%= restUser.name %> 's Homepage</h1>
@@ -75,8 +78,9 @@
         <h4>Total:</h4>
       <p id="amount">$0</p>
   </div>
-  <form id="payment" action="" method="post">
-      <button type="submit">Proceed to Payment</button>
-  </form>
+  <!-- <form id="payment"  action="/paynow/<%= user.id %>" method="post" > -->
+    
+  
 <% } %>
+
 </body>

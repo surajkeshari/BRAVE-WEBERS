@@ -29,9 +29,13 @@ router.get(`/restUser/:id`,(req,res)=>{
     //Get menu of restaurant
     router.get(`/user/:userid/:restid/:restname/menu`,(req,res)=>{
         const query= restUsers.findById(req.params.restid).exec();
-        query.then((user)=>{
-            Items.find({rest_id:user._id}).then((items)=>{
-                res.render('restPage',{restUser:user, items:items,isUser:true});  
+        query.then((restUser)=>{
+            Items.find({rest_id:restUser._id}).then((items)=>{
+              Users.findById(req.params.userid).then((user)=>{
+                
+                res.render('restPage',{restUser:restUser, items:items,user:user,isUser:true}); 
+              })  
+                 
             })
         })
     })
